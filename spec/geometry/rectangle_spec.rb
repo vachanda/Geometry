@@ -37,4 +37,11 @@ describe "Rectangle functionality check" do
 		expect(rectangle.area).to eq(length * breadth)
 	end
 
+	it "Valid rectangle area with two diagonal point" do
+		point_1 = Geometry::Point.new(1, 1)
+		point_2 = Geometry::Point.new(3, 3)
+		rectangle = Geometry::Rectangle.new(point_1, point_2)
+		expect(rectangle.perimeter_and_area).to eq({perimeter: 8, area: 4})
+	end
+
 end
