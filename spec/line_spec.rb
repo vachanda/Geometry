@@ -24,6 +24,12 @@ describe "Test for same lines" do
 	it "The line wtih end point (1,1), (3,4) is not same with nil" do
 		line1 = Line.new(1,1,3,4)
 		line2 = nil
-		expect(line1).not_to eq(line2)
+		expect(line1).to_not eq(line2)
+	end
+
+	it "The line wtih end point (1,1), (3,4) and (1,1), (3,4) are same" do
+		line1 = Line.new(1,1,3,4)
+		line2 = Line.new(1,1,3,4)
+		expect(line1 == line2).to eq(true)
 	end
 end

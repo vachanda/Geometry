@@ -13,4 +13,8 @@ class Line
 		s = x_comp * x_comp + y_comp * y_comp
 		Math.sqrt(s)
 	end
+
+	def ==(line)
+		!! line
+	end
 end
