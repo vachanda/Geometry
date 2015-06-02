@@ -9,7 +9,11 @@ class Geometry::Rectangle
 
 	def perimeter
 		return 0 if @length==0 || @breadth==0
-
 		(@length + @breadth) * 2
+	end
+
+	def area
+		return 0 if @length==0 || @breadth==0
+		@length * @breadth
 	end
 end

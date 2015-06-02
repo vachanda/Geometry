@@ -22,4 +22,19 @@ describe "Rectangle functionality check" do
 		rectangle = Geometry::Rectangle.new(length, breadth)
 		expect(rectangle.perimeter).to eq(0)
 	end
+
+	it "Perimeter valid rectange check: length and breadth are not 0" do
+		length = 1 + Random.rand(10)
+		breadth = 1 + Random.rand(8)
+		rectangle = Geometry::Rectangle.new(length, breadth)
+		expect(rectangle.perimeter).to eq((length + breadth) * 2)
+	end
+
+	it "Area for valid rectange check: length and breadth are not 0" do
+		length = 1 + Random.rand(10)
+		breadth = 1 + Random.rand(8)
+		rectangle = Geometry::Rectangle.new(length, breadth)
+		expect(rectangle.area).to eq(length * breadth)
+	end
+
 end
