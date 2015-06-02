@@ -12,3 +12,18 @@ describe "length of line" do
 		expect(line.length).to eq(0)
 	end
 end
+
+describe "Test for same lines" do
+
+	it "The line wtih end point (1,1), (3,4) is same with itself" do
+		line1 = Line.new(1,1,3,4)
+		line2 = line1
+		expect(line1).to eq(line2)
+	end
+
+	it "The line wtih end point (1,1), (3,4) is not same with nil" do
+		line1 = Line.new(1,1,3,4)
+		line2 = nil
+		expect(line1).not_to eq(line2)
+	end
+end
